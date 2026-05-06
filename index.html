@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lunara Store</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav>
+  <h2>Lunara Store</h2>
+  <ul>
+    <li onclick="goToSlide(0)">Home</li>
+    <li onclick="goToSlide(1)">About</li>
+    <li onclick="goToSlide(2)">Produk</li>
+    <li onclick="goToSlide(3)">Kontak</li>
+  </ul>
+</nav>
+
+<!-- SLIDER -->
+<div class="slider" id="slider">
+
+  <!-- HOME -->
+  <section class="slide">
+    <h1>Lunara Store</h1>
+    <p>Online shop modern yang menyediakan produk digital kreatif untuk membantu bisnis Anda berkembang lebih cepat dan profesional.</p>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="slide">
+    <h2>Tentang Kami</h2>
+    <div class="content">
+      <p><strong>Nama Usaha:</strong> Lunara Store</p>
+
+      <p><strong>Latar Belakang:</strong><br><br>
+      Lunara Store hadir sebagai solusi bagi pelaku usaha yang ingin berkembang di dunia digital. 
+      Kami melihat banyak bisnis yang memiliki potensi besar namun belum didukung oleh tampilan dan strategi digital yang optimal.
+      <br><br>
+      Oleh karena itu, Lunara Store menyediakan berbagai produk digital seperti template, desain, dan panduan bisnis yang dapat membantu meningkatkan kualitas branding dan pemasaran.
+      <br><br>
+      Dengan pengalaman dan komitmen terhadap kualitas, kami terus berinovasi untuk memberikan layanan terbaik bagi pelanggan.
+      </p>
+
+      <p><strong>Visi:</strong><br>
+      Menjadi online shop digital yang terpercaya dan inovatif di Indonesia.</p>
+
+      <p><strong>Misi:</strong></p>
+      <ul>
+        <li>Menyediakan produk digital berkualitas</li>
+        <li>Mendukung pertumbuhan bisnis pelanggan</li>
+        <li>Memberikan pelayanan terbaik dan cepat</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- PRODUK -->
+  <section class="slide">
+    <h2>Produk Kami</h2>
+    <div class="produk-container">
+
+      <div class="card">
+        <h3>Template Website</h3>
+        <p>Template modern siap pakai untuk bisnis online.</p>
+        <span>Rp 150.000</span>
+      </div>
+
+      <div class="card">
+        <h3>Desain Instagram</h3>
+        <p>Paket desain konten feed profesional.</p>
+        <span>Rp 100.000</span>
+      </div>
+
+      <div class="card">
+        <h3>Ebook Bisnis</h3>
+        <p>Panduan lengkap memulai bisnis digital.</p>
+        <span>Rp 75.000</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- KONTAK -->
+  <section class="slide">
+    <h2>Kontak Kami</h2>
+
+    <form id="contactForm">
+      <input type="text" id="nama" placeholder="Nama" required>
+      <input type="email" id="email" placeholder="Email" required>
+      <textarea id="pesan" placeholder="Pesan" required></textarea>
+      <button type="submit">Kirim</button>
+    </form>
+
+    <div id="hasil"></div>
+  </section>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
