@@ -1,26 +1,26 @@
 let currentIndex = 0;
 const slider = document.getElementById("slider");
-const totalSlides = document.querySelectorAll(".slide").length;
+const slides = document.querySelectorAll(".slide");
 
 function goToSlide(index) {
-  if (index >= 0 && index < totalSlides) {
+  if (index >= 0 && index < slides.length) {
+    
+    // Hapus active lama
+    slides[currentIndex].classList.remove("active");
+
     currentIndex = index;
+
+    // Geser slider
     slider.style.transform = "translateX(-" + (index * 100) + "%)";
+
+    // Tambah active baru (delay biar animasi enak)
+    setTimeout(() => {
+      slides[currentIndex].classList.add("active");
+    }, 200);
   }
 }
 
-// Form kontak
-document.getElementById("contactForm").addEventListener("submit", function(e) {
-  e.preventDefault();
-
-  const nama = document.getElementById("nama").value;
-  const email = document.getElementById("email").value;
-  const pesan = document.getElementById("pesan").value;
-
-  document.getElementById("hasil").innerHTML = `
-    <h3>Pesan Berhasil Dikirim</h3>
-    <p><b>Nama:</b> ${nama}</p>
-    <p><b>Email:</b> ${email}</p>
-    <p><b>Pesan:</b> ${pesan}</p>
-  `;
-});
+// Aktifkan slide pertama saat load
+window.onload = () => {
+  slides[0].classList.add("active");
+};
